@@ -160,6 +160,16 @@ p {
   margin-top: 20rem;
   gap: 6rem;
 }
+.flower-img {
+  position: relative;
+}
+#trusted-badge img {
+  position: absolute;
+  height: 286px;
+  width: 286px;
+  top: -124px;
+  right: -124px;
+}
 
 .flower-img,
 .flower-img-content {
@@ -324,13 +334,101 @@ p {
   z-index: 2;
 }
 
+/* ! Footer section  */
+
+.footer-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12rem;
+  height: 533px;
+  width: 100%;
+  background-image: url(../assets/news-letter-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-content {
+  min-width: 830px;
+}
+.img-content h2 {
+  text-align: center;
+  margin-bottom: 2.3rem;
+  color: var(--btn);
+}
+
+input {
+  padding: 2rem 1rem;
+  font-size: 1.6rem;
+  width: 100%;
+  outline: none;
+}
+.input-btn {
+  display: flex;
+}
+
+#submit {
+  padding: 2rem 5rem;
+  background-color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 5rem 15rem;
+  display: flex;
+  gap: 10rem;
+  justify-content: space-between;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20rem;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-section p {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  color: var(--p);
+  opacity: 50%;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-links a:hover {
+  color: #0073e6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2.4rem;
+}
+.footer-socials > * img {
+  height: 3.6rem;
+  width: 3.6rem;
+}
+
 /*  ! Responsive design with media query */
 
 @media screen and (max-width: 576px) {
-  body {
-    padding: 0 3rem;
+  main,
+  header {
+    padding: 0 2rem;
   }
-
   h2 {
     font-size: 2.4rem;
     text-align: left;
@@ -375,6 +473,10 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem 2rem;
+  }
+
+  .first-section-content {
+    margin: 0;
   }
 
   .flowers-item :nth-child(3) {
@@ -445,5 +547,31 @@ p {
   .promo-right {
     aspect-ratio: 16/9;
     width: 100%;
+  }
+
+  /*  footer section */
+
+  .img-content {
+    min-width: 321px;
+    margin: 0;
+  }
+  #submit {
+    padding: 2rem 0;
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    margin: 5rem 2rem;
+    gap: 1rem;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #trusted-badge {
+    display: none;
   }
 }
