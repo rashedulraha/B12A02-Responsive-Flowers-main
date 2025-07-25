@@ -12,4 +12,137 @@
   --secondary: #000000;
   --p: #000000; /*opacity 50%*/
   --btn-bg: var(--primary);
+  --span-color: #e95a08;
+  --btn: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*!  shared style */
+
+.main-container {
+  width: 1440px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+p {
+  color: var(--p);
+  opacity: 50%;
+  font-size: 2.2rem;
+  font-family: "Inter", sans-serif;
+}
+
+h2 {
+  font-size: 5rem;
+  color: var(--p);
+}
+
+h2 samp {
+  color: var(--span-color);
+}
+button {
+  color: var(--btn);
+  padding: 2rem 8rem;
+}
+
+/*!  end share style */
+
+/* ? start main style */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3rem 0 12rem 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+nav ul li {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+}
+
+.menu-link :nth-child(1) {
+  color: var(--p);
+  font-weight: 600;
+}
+.menu-link :nth-child(2),
+.menu-link :nth-child(3) {
+  color: var(--p);
+  opacity: 50%;
+  font-weight: 400;
+}
+
+/* ! start hero container  */
+
+.hero-container {
+  display: flex;
+  align-items: end;
+  width: 100%;
+  margin-bottom: 12rem;
+}
+.hero-img,
+.hero-content {
+  width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 6.5rem;
+  font-weight: bold;
+  font-family: "Noto Serif", serif;
+  margin-bottom: 1.3rem;
+}
+
+.hero-content span {
+  color: var(--primary);
+}
+
+.hero-img figure img {
+  width: 100%;
+}
+/*  ! Responsive design with media query */
+
+@media screen and (max-width: 576px) {
+  body {
+    padding: 0 2rem;
+  }
+
+  p,
+  li {
+    font-size: 14px;
+  }
+  .main-container {
+    width: 100%;
+  }
+
+  .mobile-display-none {
+    display: none;
+  }
+  .hero-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2.8rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.4rem;
+    margin-bottom: 0.8rem;
+  }
+  .hero-img,
+  .hero-content {
+    width: 100%;
+  }
+  .hero-img img {
+    height: 245px;
+    width: 393.18px;
+  }
 }
